@@ -1,0 +1,185 @@
+/* start globle feature */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* font-family: "Days One", sans-serif; */
+    font-family: "Chakra Petch", sans-serif;
+}
+
+::selection {
+    background-color: var(--main-color);
+    color: var(--main-background-color);
+}
+
+:root {
+    --main-background-color: #0B0E13;
+    --main-color: #CBFE1C;
+    --sub-color: #F1F1F1;
+    --border-color: #1E2939;
+}
+
+.btn-main-color {
+    background-color: var(--main-color);
+}
+
+.btn-sub-color {
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+.btn-sub-color:hover {
+    background-color: var(--main-color);
+    color: var(--main-background-color);
+}
+
+.btn-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-shine:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #0000, #fff6, #0000);
+    transition: left 0.6s;
+    top: 0;
+    position: absolute;
+    left: -100%;
+}
+
+.btn-shine:hover::before {
+    left: 100%;
+}
+
+.btn-shine:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    transition: 0.3s;
+}
+
+.btn-shine:hover::after {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/* end globle feature */
+
+
+/* start Navbar */
+
+header {
+    background-color: var(--main-background-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.logo-container i {
+    color: var(--main-color);
+}
+
+#header .nav-bar-btn {
+    box-shadow: none;
+}
+
+.bars-icon {
+    color: var(--sub-color);
+}
+
+#header .navbar-nav .nav-link.active,
+#header .navbar-nav .nav-link.show {
+    color: var(--main-color);
+}
+
+#header .nav-color {
+    color: var(--sub-color);
+    transition: 0.3s;
+}
+
+#header .nav-color:hover {
+    color: var(--main-color);
+}
+
+
+#header .brand-name {
+    color: var(--main-color);
+}
+
+.Sign-In-container .notification,
+.Sign-In-container .message {
+    color: var(--sub-color);
+    transition: 0.3s;
+}
+
+.Sign-In-container .notification:hover,
+.Sign-In-container .message:hover {
+    color: var(--main-color);
+}
+
+@media (max-width: 991.5px) {
+
+    .nav-bar-list {
+        margin-top: 20px;
+    }
+
+    .Sign-In-container {
+        margin-top: 20px;
+        border-top: 1px solid var(--border-color);
+        padding-top: 20px;
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .header-links {
+        border-top: 1px solid var(--border-color);
+    }
+
+    .header-nav-container {
+        width: 100%;
+    }
+
+    .Sign-In-container .display-none {
+        display: inline !important;
+    }
+
+    .Sign-In-container .notification,
+    .Sign-In-container .message {
+        margin-bottom: 12px;
+    }
+
+    .nav-bar-list {
+        margin-top: 0;
+    }
+
+    .nav-bar-list li {
+        margin-bottom: 16px;
+    }
+
+    .sign-in-btn {
+        width: 100%;
+    }
+
+    .brand-name {
+        font-size: 20px;
+    }
+}
+
+/* end Navbar */
