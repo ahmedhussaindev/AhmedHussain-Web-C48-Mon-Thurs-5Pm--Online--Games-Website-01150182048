@@ -13,8 +13,15 @@ html {
 }
 
 body {
-    /* font-family: "Days One", sans-serif; */
     font-family: "Chakra Petch", sans-serif;
+    background-color: var(--main-background-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Days One", sans-serif;
 }
 
 ::selection {
@@ -27,6 +34,8 @@ body {
     --main-color: #CBFE1C;
     --sub-color: #F1F1F1;
     --border-color: #1E2939;
+    --gray-color: #8B92A0;
+    --second-gray: #D1D5DC;
 }
 
 .btn-main-color {
@@ -123,24 +132,19 @@ header {
     color: var(--main-color);
 }
 
-.Sign-In-container .notification,
-.Sign-In-container .message {
+.sign-in-container .notification,
+.sign-in-container .message {
     color: var(--sub-color);
     transition: 0.3s;
 }
 
-.Sign-In-container .notification:hover,
-.Sign-In-container .message:hover {
+.sign-in-container .notification:hover,
+.sign-in-container .message:hover {
     color: var(--main-color);
 }
 
 @media (max-width: 991.5px) {
-
-    .nav-bar-list {
-        margin-top: 20px;
-    }
-
-    .Sign-In-container {
+    .sign-in-container {
         margin-top: 20px;
         border-top: 1px solid var(--border-color);
         padding-top: 20px;
@@ -156,17 +160,13 @@ header {
         width: 100%;
     }
 
-    .Sign-In-container .display-none {
+    .sign-in-container .display-none {
         display: inline !important;
     }
 
-    .Sign-In-container .notification,
-    .Sign-In-container .message {
+    .sign-in-container .notification,
+    .sign-in-container .message {
         margin-bottom: 12px;
-    }
-
-    .nav-bar-list {
-        margin-top: 0;
     }
 
     .nav-bar-list li {
@@ -183,3 +183,139 @@ header {
 }
 
 /* end Navbar */
+
+
+/* start hero section */
+
+.hero {
+    padding-top: 120px;
+    padding-bottom: 64px;
+    background-image: linear-gradient(#000000e0, #000000e0), url("../images/hero-bg.jpg");
+    background-position: 50%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.trophy-container {
+    background-color: var(--main-background-color);
+    border: 2px solid var(--border-color);
+}
+
+.trophy i {
+    color: var(--main-color);
+}
+
+.image-container img {
+    border: 4px solid var(--main-color);
+}
+
+.hero-text h1 {
+    color: var(--sub-color);
+}
+
+.hero-text h1 span {
+    color: var(--main-color);
+}
+
+.hero-text p {
+    color: var(--second-gray);
+    line-height: 1.8;
+}
+
+.active-players {
+    font-size: 12px;
+    color: var(--gray-color);
+}
+
+.active-players-number {
+    color: var(--sub-color);
+}
+
+.trophy-container {
+    bottom: -6%;
+    left: -0.1%;
+}
+
+/* end hero section */
+
+/* media */
+
+/* xs */
+@media screen and (max-width:576px) {
+    .image-container {
+        height: 224px;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .trophy i {
+        font-size: 15px;
+    }
+
+    .trophy-container {
+        padding: 12px;
+    }
+
+    .active-players {
+        font-size: 10px;
+    }
+
+    .active-players-number {
+        font-size: 12px;
+    }
+
+    .hero-btn {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .hero-btn button {
+        padding: 10px 20px !important;
+    }
+
+    .start-gaming-now-btn,
+    .watch-tournaments-btn {
+        width: 100%;
+    }
+}
+
+/* sm */
+@media screen and (min-width:576px) {
+    .image-container {
+        height: 300px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .trophy i {
+        font-size: 18px;
+    }
+}
+
+/* md */
+@media screen and (min-width:768px) {
+    .image-container {
+        height: 384px;
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+    }
+}
+
+/* lg */
+@media screen and (min-width:992px) {
+    .hero-text h1 {
+        font-size: 60px;
+    }
+}
+
+/* xl */
+@media screen and (min-width:1200px) {}
+
+/* xxl */
+@media screen and (min-width:1400px) {}

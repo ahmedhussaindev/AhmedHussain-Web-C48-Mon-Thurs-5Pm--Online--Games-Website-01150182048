@@ -25,55 +25,58 @@
 
     <!-- start nav -->
 
-    <header class="position-fixed w-100" id="header">
-        <nav class="navbar navbar-expand-lg mx-xxl-5 mx-auto px-0 py-0 px-lg-4 py-lg-3">
-            <div class="container-fluid px-0 px-xxl-5">
-                <div class="header-nav-container d-flex justify-content-between px-4 py-3 px-lg-0 py-lg-0">
-                    <div class="logo-container me-4 d-flex align-items-center">
-                        <i class="fa-solid fa-gamepad me-2 fa-lg"></i>
-                        <span class="brand-name navbar-brand me-1 fw-bold">GameArena</span>
+    <header class="position-fixed w-100 z-3" id="header">
+        <div class="container-xl px-0">
+            <nav class="navbar navbar-expand-lg mx-auto px-0 py-0 py-lg-3">
+                <div class="container-fluid px-0">
+                    <div class="header-nav-container d-flex justify-content-between px-4 py-3 px-lg-0 py-lg-0">
+                        <div class="logo-container me-4 d-flex align-items-center">
+                            <i class="fa-solid fa-gamepad me-2 fa-lg"></i>
+                            <span class="brand-name navbar-brand me-1 fw-bold">GameArena</span>
+                        </div>
+                        <button class="nav-bar-btn navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="bars-icon fa-solid fa-bars fa-lg"></i>
+                        </button>
                     </div>
-                    <button class="nav-bar-btn navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="bars-icon fa-solid fa-bars fa-lg"></i>
-                    </button>
-                </div>
 
-                <div class="header-links px-4 py-3 px-lg-0 py-lg-0 collapse navbar-collapse"
-                    id="navbarSupportedContent">
-                    <ul class="nav-bar-list navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-color nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-color nav-link" href="#">OUR GAMES</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-color nav-link" href="#">What We Do</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-color nav-link" href="#">Our Team</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-color nav-link" href="#">Contact Us</a>
-                        </li>
-                    </ul>
-                    <div class="Sign-In-container d-flex align-items-center">
-                        <button type="button" class="border-0 bg-transparent me-3 notification">
-                            <i class="fa-regular fa-bell fa-lg"></i> <span
-                                class="display-none d-none">Notifications</span>
-                        </button>
-                        <button type="button" class="border-0 bg-transparent me-3 message">
-                            <i class="fa-regular fa-message fa-lg"></i> <span
-                                class="display-none d-none">Messages</span>
-                        </button>
-                        <button class="sign-in-btn btn-main-color border-0 me-3 fw-bold btn-shine px-4 py-2 rounded-2"
-                            type="submit">Sign In</button>
+                    <div class="header-links px-4 py-3 px-lg-0 py-lg-0 collapse navbar-collapse"
+                        id="navbarSupportedContent">
+                        <ul class="nav-bar-list navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-color nav-link active" aria-current="page" href="#hero">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-color nav-link" href="#">OUR GAMES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-color nav-link" href="#">What We Do</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-color nav-link" href="#">Our Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-color nav-link" href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                        <div class="sign-in-container d-flex align-items-center">
+                            <button type="button" class="border-0 bg-transparent me-3 notification">
+                                <i class="fa-regular fa-bell fa-lg"></i> <span
+                                    class="display-none d-none">Notifications</span>
+                            </button>
+                            <button type="button" class="border-0 bg-transparent me-3 message">
+                                <i class="fa-regular fa-message fa-lg"></i> <span
+                                    class="display-none d-none">Messages</span>
+                            </button>
+                            <button
+                                class="sign-in-btn btn-main-color border-0 me-3 fw-bold btn-shine px-4 py-2 rounded-2"
+                                type="submit">Sign In</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <!-- end nav -->
@@ -82,7 +85,47 @@
     <!-- start main -->
 
     <main>
-        <section></section>
+
+        <!-- start hero section -->
+
+        <section class="hero min-vh-100 d-flex align-items-center" id="hero">
+            <div class="container d-flex align-items-center justify-content-center">
+                <div class="row align-items-center px-xxl-2 text-center text-lg-start">
+                    <div class="hero-text col-lg-6">
+                        <h1 class="d-flex flex-column mb-4">THE ULTIMATE <span> GAMING</span> EXPERIENCE</h1>
+                        <p class="mb-5">Join millions of gamers worldwide in the most competitive eSports tournaments.
+                            Experience
+                            next-level gaming with cutting-edge technology and endless possibilities.</p>
+                        <div class="hero-btn d-flex align-items-center justify-content-center justify-content-lg-start mb-5">
+                            <button
+                                class="start-gaming-now-btn btn-main-color border-0 me-sm-3 fw-bold btn-shine px-4 py-3 rounded-2"
+                                type="submit">Start Gaming Now</button>
+                            <button class="watch-tournaments-btn btn-sub-color fw-bold btn-shine px-4 py-3 rounded-2"
+                                type="submit">Watch Tournaments</button>
+                        </div>
+                    </div>
+                    <div class="hero-image col-lg-6 position-relative">
+                        <div class="image-container">
+                            <img class="w-100 h-100 object-fit-cover rounded-4" src="images/hero-img.png"
+                                alt="hero-img">
+                        </div>
+                        <div class="trophy-container p-lg-4 p-sm-2 rounded-3 position-absolute">
+                            <div class="trophy d-flex align-items-center gap-2 text-start">
+                                <i class="fa-solid fa-trophy fa-lg"></i>
+                                <div>
+                                    <p class="active-players mb-0">Active Players</p>
+                                    <p class="active-players-number mb-0 fs-5 fw-bold">2.5M+</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- end hero section -->
+
+
         <section></section>
         <section></section>
         <section></section>
