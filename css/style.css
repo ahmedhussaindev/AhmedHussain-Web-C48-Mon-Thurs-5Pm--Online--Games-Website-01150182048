@@ -36,6 +36,9 @@ h2 {
     --gray-color: #8B92A0;
     --second-gray: #D1D5DC;
     --dark-gray: #99a1af;
+    --card-color: #1A1A1A;
+    --card-border: #18212E;
+    --dark-color: #1e2939;
 }
 
 .btn-main-color {
@@ -384,6 +387,75 @@ header {
 /* end our games */
 
 
+/* start what we do */
+
+.what-we-do {
+    padding: 96px 0px 48px;
+}
+
+.we-build span {
+    color: var(--main-color);
+}
+
+.what-we-card {
+    background-color: var(--card-color);
+    border: 2px solid var(--card-border);
+    transition: 0.2s;
+}
+
+.card-content h3 {
+    font-family: "Days One", sans-serif;
+    color: var(--sub-color);
+}
+
+.card-icon {
+    width: 64px;
+    height: 64px;
+    background-color: var(--dark-color);
+    color: var(--main-color);
+    border-radius: 0.5rem;
+    transition: 0.2s;
+
+}
+
+.top-icon {
+    top: -10%;
+    left: -10%;
+    border-top: 24px solid #CBFE1C;
+    border-right: 24px solid transparent;
+    transition: 0.2s;
+}
+
+.bottom-icon {
+    bottom: -10%;
+    right: -10%;
+    border-bottom: 24px solid #CBFE1C;
+    border-left: 24px solid transparent;
+    transition: 0.2s;
+}
+
+.what-we-card:hover .top-icon {
+    top: 6%;
+    left: 6%;
+}
+
+.what-we-card:hover .bottom-icon {
+    bottom: 6%;
+    right: 6%;
+}
+
+.what-we-card:hover .card-icon {
+    background-color: var(--main-color);
+    color: var(--dark-color);
+}
+
+.what-we-card:hover {
+    border-color: var(--main-color);
+}
+
+/* end what we do */
+
+
 /* media */
 
 /* xs */
@@ -444,6 +516,16 @@ header {
         width: 35px;
         height: 35px;
     }
+
+    .card-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .what-we-card,
+    .what-we-image {
+        height: 210px;
+    }
 }
 
 /* sm */
@@ -463,6 +545,15 @@ header {
     .heading-2 {
         font-size: 28px;
     }
+
+    .card-content h3 {
+        font-size: 20px !important;
+    }
+
+    .what-we-card,
+    .what-we-image {
+        height: 250px;
+    }
 }
 
 /* md */
@@ -478,6 +569,11 @@ header {
     .heading-2 {
         font-size: 32px;
     }
+
+    .what-we-card,
+    .what-we-image {
+        height: 340px;
+    }
 }
 
 /* lg */
@@ -488,6 +584,11 @@ header {
 
     .heading-2 {
         font-size: 48px;
+    }
+
+    .what-we-card,
+    .what-we-image {
+        height: 100%;
     }
 }
 
