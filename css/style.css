@@ -18,9 +18,7 @@ body {
 }
 
 h1,
-h2,
-h3,
-h4 {
+h2 {
     font-family: "Days One", sans-serif;
 }
 
@@ -34,12 +32,15 @@ h4 {
     --main-color: #CBFE1C;
     --sub-color: #F1F1F1;
     --border-color: #1E2939;
+    --second-border: #364153;
     --gray-color: #8B92A0;
     --second-gray: #D1D5DC;
+    --dark-gray: #99a1af;
 }
 
 .btn-main-color {
     background-color: var(--main-color);
+    border: 2px solid var(--main-color);
 }
 
 .btn-sub-color {
@@ -198,7 +199,7 @@ header {
 
 .trophy-container {
     background-color: var(--main-background-color);
-    border: 2px solid var(--border-color);
+    border: 1px solid var(--second-border);
 }
 
 .trophy i {
@@ -236,7 +237,152 @@ header {
     left: -0.1%;
 }
 
+.gradiant1 {
+    width: 70px;
+    height: 3px;
+    background: #CBFE1C;
+    background: linear-gradient(90deg, #00000080 0%, #cbfe1c 100%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.gradiant2 {
+    width: 70px;
+    height: 3px;
+    background: #CBFE1C;
+    background: linear-gradient(90deg, #cbfe1c 0%, #00000080 100%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.our-games-text {
+    font-family: "Chakra Petch", sans-serif;
+    color: var(--main-color);
+    letter-spacing: 2px;
+}
+
 /* end hero section */
+
+
+/* start our games */
+
+.our-games {
+    padding: 96px 0px;
+    background-color: var(--main-background-color);
+}
+
+.carousel-container img {
+    max-height: 18em;
+}
+
+.carousel-container {
+    overflow: hidden;
+}
+
+.heading-2 {
+    font-size: 48px;
+    color: var(--sub-color);
+}
+
+.transition-bottom {
+    width: calc(100% - 16px);
+    margin: auto;
+}
+
+.game-type-container {
+    top: -30%;
+    left: 6%;
+    font-size: 12px;
+    color: var(--sub-color);
+    transition: 0.5s;
+}
+
+.game-type-container span {
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.game-type-container span i {
+    color: var(--main-color);
+}
+
+.img-wrapper {
+    overflow: hidden;
+}
+
+.img-wrapper img {
+    transition: 0.5s;
+}
+
+.img-wrapper {
+    border: 2px solid transparent;
+    transition: 0.5s;
+}
+
+.carousel-container:hover .img-wrapper {
+    border-color: var(--main-color);
+}
+
+.carousel-container:hover img {
+    transform: scale(1.1);
+}
+
+.transition-bottom {
+    background: #FFF;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.01) 0%, rgba(203, 254, 28, 1) 100%);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.carousel-container:hover .transition-bottom {
+    opacity: 1;
+}
+
+.game-name {
+    color: var(--main-background-color);
+    bottom: -30%;
+    transition: 0.5s;
+}
+
+.carousel-container:hover .game-name {
+    bottom: 0;
+}
+
+.carousel-container:hover .game-type-container {
+    top: 4%;
+    z-index: 0;
+}
+
+.game-name,
+.game-type-container,
+.img-wrapper {
+    cursor: pointer;
+}
+
+.game-name,
+.game-type-container,
+.transition-bottom {
+    pointer-events: none;
+}
+
+.action-btn button {
+    width: 50px;
+    height: 50px;
+    color: var(--dark-gray);
+    border: 2px solid var(--second-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.action-btn button:hover {
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+/* end our games */
+
 
 /* media */
 
@@ -266,18 +412,37 @@ header {
         font-size: 12px;
     }
 
-    .hero-btn {
+    .hero-btn,
+    .our-games-btn-container {
         flex-direction: column;
         gap: 16px;
     }
 
     .hero-btn button {
         padding: 10px 20px !important;
+        font-size: 12px;
     }
 
     .start-gaming-now-btn,
     .watch-tournaments-btn {
         width: 100%;
+    }
+
+    .logo-container {
+        flex-wrap: wrap;
+    }
+
+    .heading-2 {
+        font-size: 28px;
+    }
+
+    .action-btn button .action-icon {
+        font-size: 16px;
+    }
+
+    .action-btn button {
+        width: 35px;
+        height: 35px;
     }
 }
 
@@ -294,6 +459,10 @@ header {
     .trophy i {
         font-size: 18px;
     }
+
+    .heading-2 {
+        font-size: 28px;
+    }
 }
 
 /* md */
@@ -305,12 +474,20 @@ header {
     .hero-text h1 {
         font-size: 48px;
     }
+
+    .heading-2 {
+        font-size: 32px;
+    }
 }
 
 /* lg */
 @media screen and (min-width:992px) {
     .hero-text h1 {
         font-size: 60px;
+    }
+
+    .heading-2 {
+        font-size: 48px;
     }
 }
 
