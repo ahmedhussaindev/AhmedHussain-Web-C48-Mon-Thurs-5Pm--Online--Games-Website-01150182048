@@ -18,7 +18,9 @@ body {
 }
 
 h1,
-h2 {
+h2,
+.card-content h3,
+.left-side h3 {
     font-family: "Days One", sans-serif;
 }
 
@@ -391,6 +393,20 @@ header {
 
 .what-we-do {
     padding: 96px 0px 48px;
+    position: relative;
+}
+
+.what-we-do:after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    max-width: 600px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--main-color) 20%, var(--main-color) 80%, transparent);
+    box-shadow: 0 0 10px var(--main-color), 0 0 20px #cbfe1c4d;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .we-build span {
@@ -454,6 +470,139 @@ header {
 }
 
 /* end what we do */
+
+
+/* start sponsors */
+
+.sponsors {
+    padding-block: 80px;
+}
+
+.logos-track {
+    display: flex;
+    width: max-content;
+    gap: 20px;
+}
+
+.logos-track img {
+    max-width: 96px;
+    min-width: 80px;
+    border-radius: 16px;
+}
+
+.left {
+    animation: moveLeft 30s linear infinite;
+}
+
+
+.right {
+    animation: moveRight 30s linear infinite;
+}
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes moveRight {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.bg-sponsors {
+    background: var(--main-color);
+    background: linear-gradient(0deg, var(--main-background-color), var(--main-color) 50%, var(--main-background-color));
+    filter: blur(10px);
+    box-shadow: 0 0 20px 20px var(--main-background-color) inset;
+    opacity: 0.8;
+}
+
+.sponsors::before,
+.sponsors::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 3;
+}
+
+.sponsors::before {
+    left: 0;
+    background: linear-gradient(to right, #0B0E13, transparent);
+}
+
+.sponsors::after {
+    right: 0;
+    background: linear-gradient(to left, #0B0E13, transparent);
+}
+
+/* end sponsors */
+
+
+/* start our-team */
+
+.our-team {
+    padding-block: 96px;
+}
+
+.team-text {
+    color: var(--dark-gray);
+}
+
+.left-side h3 {
+    font-family: "Days One", sans-serif;
+    color: #FFF;
+}
+
+.left-side .top-p {
+    font-size: 14px;
+    color: var(--main-color);
+}
+
+.left-side .bottom-p {
+    font-size: 12px;
+    color: var(--dark-gray);
+}
+
+.right-side {
+    color: var(--main-color);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.card-componant::before {
+    content: "";
+    position: absolute;
+    backdrop-filter: grayscale(100%);
+    z-index: 1;
+    width: 102%;
+    height: 100%;
+    transition: 1s cubic-bezier(.4, 0, .2, 1);
+}
+
+.card-componant:hover::before {
+    transform: translateY(-100%);
+}
+
+/* end our-team */
+
+
+/* start contact us */
+
+
+
+/* end contact us */
 
 
 /* media */
@@ -523,7 +672,8 @@ header {
     }
 
     .what-we-card,
-    .what-we-image {
+    .what-we-image,
+    .our-team-card {
         height: 210px;
     }
 }
@@ -551,7 +701,8 @@ header {
     }
 
     .what-we-card,
-    .what-we-image {
+    .what-we-image,
+    .our-team-card {
         height: 250px;
     }
 }
@@ -571,7 +722,8 @@ header {
     }
 
     .what-we-card,
-    .what-we-image {
+    .what-we-image,
+    .our-team-card {
         height: 340px;
     }
 }
@@ -589,6 +741,10 @@ header {
     .what-we-card,
     .what-we-image {
         height: 100%;
+    }
+
+    .bg-sponsors {
+        width: 80% !important;
     }
 }
 
